@@ -1,0 +1,328 @@
+/* Exact UI Match CSS */
+:root {
+  --nsrit-yellow: #ffcc00;
+  --nsrit-red: #cc0000;
+  --header-blue: #99ccff;
+  /* Sky blue for secondary headers */
+  --sidebar-bg: #e6f2ff;
+  --sidebar-border: #99c2ff;
+  --text-dark: #333333;
+  --text-blue: #0000cc;
+  --link-blue: #0000ee;
+  --btn-blue: #33b5e5;
+  --accordion-bg: #f1f8ff;
+  --border-color: #b3d4fc;
+  --table-header-bg: #cccccc;
+  --table-border: #999999;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-blue);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* Yellow Banner Header */
+.official-header {
+  background-color: var(--nsrit-yellow);
+  text-align: center;
+  padding: 10px;
+  border-bottom: 2px solid #333;
+}
+
+.official-header h1 {
+  color: var(--nsrit-red);
+  font-size: 24px;
+  margin-bottom: 5px;
+  font-family: "Arial Black", Impact, sans-serif;
+  letter-spacing: 1px;
+}
+
+.official-header p {
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/* scrolling marquee */
+.marquee-container {
+  color: blue;
+  font-size: 14px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* Login Page Specifics */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.login-box {
+  width: 300px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  background: white;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.login-header {
+  background-color: var(--btn-blue);
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.login-form {
+  padding: 20px 15px;
+}
+
+.login-form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.login-form-group label {
+  width: 100px;
+  color: red;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.login-form-group input {
+  flex: 1;
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+.login-submit-btn {
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+  border: 1px solid #999;
+  border-radius: 15px;
+  padding: 5px 20px;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  float: right;
+  margin-right: 15px;
+}
+
+/* Dashboard Specifics */
+.dash-topbar {
+  background-color: #99ccff;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-size: 12px;
+  color: var(--text-blue);
+}
+
+.dash-topbar a {
+  color: var(--text-blue);
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.dash-layout {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+/* Sidebar */
+.dash-sidebar {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+}
+
+.sidebar-header {
+  background-color: #6699ff;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.sidebar-menu li {
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.sidebar-menu button {
+  width: 100%;
+  text-align: left;
+  padding: 10px 15px;
+  background: none;
+  border: none;
+  color: var(--text-blue);
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.sidebar-menu button:hover {
+  background-color: #d9ebff;
+}
+
+.sidebar-menu button::before {
+  content: "↘";
+  margin-right: 8px;
+  color: #3399ff;
+  font-weight: bold;
+}
+
+/* Main Content */
+.dash-main {
+  flex: 1;
+  padding: 5px 15px;
+}
+
+.section-title {
+  color: #333366;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+/* Accordion */
+.accordion-item {
+  border: 1px solid var(--border-color);
+  margin-bottom: 2px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background-color: var(--accordion-bg);
+  padding: 6px 15px;
+  color: var(--text-blue);
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.accordion-header::before {
+  content: "▶";
+  font-size: 10px;
+  margin-right: 8px;
+  color: var(--text-blue);
+}
+
+.accordion-header.active {
+  background-color: #e6f2ff;
+}
+
+.accordion-header.active::before {
+  content: "▼";
+}
+
+.accordion-content {
+  padding: 10px 15px;
+  background: white;
+  border-top: 1px solid var(--border-color);
+  font-size: 13px;
+}
+
+/* Action buttons */
+.action-buttons {
+  margin-top: 15px;
+}
+
+.btn-action {
+  background-color: #33b5e5;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  margin-right: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.btn-action:hover {
+  background-color: #0099cc;
+}
+
+/* Chatbot Feedback/Suggestion Styles */
+.chatbot-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.suggestion-btn {
+  background-color: #f0f7ff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-size: 11px;
+  color: var(--text-blue);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.suggestion-btn:hover {
+  background-color: var(--btn-blue);
+  color: white;
+  border-color: var(--btn-blue);
+  transform: translateY(-1px);
+}
+
+.chatbot-message-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
+}
+
+.chatbot-message-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatbot-message-container::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 10px;
+}
